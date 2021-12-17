@@ -24,7 +24,7 @@ main(int argc, char *  argv[])
 		double result = a1 - a2;
 		printf("result = %lf\n", result);
 		if (result < cutoff){
-			printf("result below cutoff %.3f\n", cutoff);
+			printf("result below cutoff %.3lf\n", cutoff);
 		}
 		libUncertainDoublePrint(result);
 	}
