@@ -8,6 +8,7 @@ main(int argc, char *  argv[])
 	const double rangeStart = 0;
 	const double rangeStop = 1;
 	const unsigned long iterations = 5;
+	const double cutoff = 0.01;
 
 	a1 = libUncertainDoubleUniformDist(rangeStart, rangeStop);
 	printf("a1 = %lf\n", a1);
@@ -20,8 +21,11 @@ main(int argc, char *  argv[])
 		printf("a2 = %lf\n", a2);
 		libUncertainDoublePrint(a2);
 
-		double result = abs(a1 - a2);
+		double result = a1 - a2;
 		printf("result = %lf\n", result);
+		if (result < cutoff){
+			printf("result below cutoff\n");
+		}
 		libUncertainDoublePrint(result);
 	}
 
