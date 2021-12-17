@@ -14,13 +14,13 @@ main(int argc, char *  argv[])
 	libUncertainDoublePrint(a1);
 
 	for (unsigned long i = 0; i < iterations; i++){
-		printf("i = %u\n", i);
+		printf("i = %lu\n", i);
 
 		a2 = libUncertainDoubleUniformDist(rangeStart, rangeStop);
 		printf("a2 = %lf\n", a2);
 		libUncertainDoublePrint(a2);
 
-		double result = a1 - a2;
+		double result = abs(a1 - a2);
 		printf("result = %lf\n", result);
 		libUncertainDoublePrint(result);
 	}
