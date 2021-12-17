@@ -12,7 +12,8 @@ main(int argc, char *  argv[])
 	printf("a1 = %lf\n", a1);
 	libUncertainDoublePrint(a1);
 
-	a2 = libUncertainDoubleUniformDist(rangeStart, rangeStop);
+	/*a2 = libUncertainDoubleUniformDist(rangeStart, rangeStop);*/
+	a2 = a1;
 	printf("a2 = %lf\n", a2);
 	libUncertainDoublePrint(a2);
 
