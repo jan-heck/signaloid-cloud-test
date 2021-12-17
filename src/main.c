@@ -14,7 +14,7 @@ main(int argc, char *  argv[])
 	libUncertainDoublePrint(a1);
 
 	for (unsigned long i = 0; i < iterations; i++){
-		printf("i = %d", i);
+		printf("i = %u\n", i);
 
 		a2 = libUncertainDoubleUniformDist(rangeStart, rangeStop);
 		printf("a2 = %lf\n", a2);
