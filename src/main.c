@@ -4,18 +4,21 @@
 int
 main(int argc, char *  argv[])
 {
-	double	a, b, c;
+	double a1, a2;
+	const double rangeStart = 0;
+	const double rangeStop = 1;
 
-	a = libUncertainDoubleUniformDist(0.5, 1.0);
-	printf("a = %lf\n", a);
-	libUncertainDoublePrint(a);
+	a1 = libUncertainDoubleUniformDist(rangeStart, rangeStop);
+	printf("a1 = %lf\n", a1);
+	libUncertainDoublePrint(a1);
 
-	b = libUncertainDoubleUniformDist(10.0, 20.0);
-	printf("b = %lf\n", b);
-	libUncertainDoublePrint(b);
+	a2 = libUncertainDoubleUniformDist(rangeStart, rangeStop);
+	printf("a2 = %lf\n", a2);
+	libUncertainDoublePrint(a2);
 
-	c = (a+b)/(a-b);
-	printf("c = %lf\n", c);
-	libUncertainDoublePrint(c);
+	double result = a1 - a2;
+	printf("result = %lf\n", result);
+	libUncertainDoublePrint(result);
+
 	return 0;
 }
