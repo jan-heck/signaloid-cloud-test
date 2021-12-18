@@ -11,14 +11,14 @@ main(int argc, char *  argv[])
 	const double cutoff = 0.01;
 
 	a1 = libUncertainDoubleUniformDist(rangeStart, rangeStop);
-	printf("Create a uniform distribution between [%lf, %lf] (constant)\n", rangeStart, rangeStop);
+	printf("Create a uniform distribution a1 between [%lf, %lf] (constant)\n", rangeStart, rangeStop);
 	printf("a1 = %lf\n", a1);
 	libUncertainDoublePrint(a1);
 
 	for (unsigned long i = 0; i < iterations; i++){
 		printf("Iteration i = %lu\n", i);
 
-		printf("Subtract from this a uniform distribution between [%lf, %lf] (changes every iteration)\n", rangeStart, rangeStop);
+		printf("Subtract from this a parameter-equal uniform distribution a2 (changes every iteration)\n", rangeStart, rangeStop);
 		a2 = libUncertainDoubleUniformDist(rangeStart, rangeStop);
 		printf("a2 = %lf\n", a2);
 		libUncertainDoublePrint(a2);
@@ -30,7 +30,6 @@ main(int argc, char *  argv[])
 		printf("result = a1 - a2 = %lf\n", result);
 		libUncertainDoublePrint(result);
 		printf("result's 2nd mode = %lf\n", result2ndMode);
-		libUncertainDoublePrint(result2ndMode);
 		printf("tail (>%lf) probability for result = %lf\n", cutoff, resultTailProbability);
 
 		/*if (result < cutoff){*/
