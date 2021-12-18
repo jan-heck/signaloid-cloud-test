@@ -16,7 +16,7 @@ main(int argc, char *  argv[])
 	libUncertainDoublePrint(a1);
 
 	for (unsigned long i = 0; i < iterations; i++){
-		printf("Iteration i = %lu\n", i);
+		printf("\n\nIteration i = %lu\n", i);
 
 		printf("Subtract from a1 a parameter-equal uniform distribution a2 (changes every iteration)\n");
 		a2 = libUncertainDoubleUniformDist(rangeStart, rangeStop);
