@@ -25,12 +25,14 @@ main(int argc, char *  argv[])
 
 		double result = a1 - a2;
 		double result2ndMode = libUncertainDoubleNthMoment(result, 1);
-		double resultTailProbability = libUncertainDoubleProbabilityGT(result, cutoff);
+		double resultTailProbabilityPositive = libUncertainDoubleProbabilityGT(result, +cutoff);
+		double resultTailProbabilityNegative = 1 - libUncertainDoubleProbabilityGT(result, -cutoff);
 
 		printf("result = a1 - a2 = %lf\n", result);
 		libUncertainDoublePrint(result);
 		printf("result's 2nd mode = %lf\n", result2ndMode);
-		printf("tail (>%lf) probability for result = %lf\n", cutoff, resultTailProbability);
+		printf("tail (>%lf) probability for result = %lf\n", +cutoff, resultTailProbability);
+		printf("tail (<%lf) probability for result = %lf\n", -cutoff, resultTailProbability);
 
 		/*if (result < cutoff){*/
 		/*  printf("result below cutoff %.3lf\n", cutoff);*/
