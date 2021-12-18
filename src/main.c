@@ -24,7 +24,7 @@ main(int argc, char *  argv[])
 		double result = a1 - a2;
 		double result1stMode = libUncertainDoubleNthMoment(result, 1);
 
-		printf("result = %lf\n", result);
+		printf("result = a1 - a2 = %lf\n", result);
 		libUncertainDoublePrint(result);
 		printf("result's 1st mode = %lf\n", result1stMode);
 		libUncertainDoublePrint(result1stMode);
