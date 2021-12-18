@@ -22,11 +22,17 @@ main(int argc, char *  argv[])
 		libUncertainDoublePrint(a2);
 
 		double result = a1 - a2;
+		double result1stMode = libUncertainDoubleNthMoment(result, 1);
+
 		printf("result = %lf\n", result);
-		if (result < cutoff){
-			printf("result below cutoff %.3lf\n", cutoff);
-		}
 		libUncertainDoublePrint(result);
+		printf("result's 1st mode = %lf\n", result1stMode);
+		libUncertainDoublePrint(result1stMode);
+
+		/*if (result < cutoff){*/
+		/*  printf("result below cutoff %.3lf\n", cutoff);*/
+		/*}*/
+
 	}
 
 	return 0;
