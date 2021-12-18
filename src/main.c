@@ -29,7 +29,7 @@ main(int argc, char *  argv[])
 		libUncertainDoublePrint(result);
 		printf("result's 1st mode = %lf\n", result1stMode);
 		libUncertainDoublePrint(result1stMode);
-		printf("tail (>%lf) probability for result = %lf\n", resultTailProbability, result1stMode);
+		printf("tail (>%lf) probability for result = %lf\n", cutoff, resultTailProbability);
 
 		/*if (result < cutoff){*/
 		/*  printf("result below cutoff %.3lf\n", cutoff);*/
