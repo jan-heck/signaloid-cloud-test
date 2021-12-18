@@ -8,7 +8,7 @@ main(int argc, char *  argv[])
 	const double rangeStart = 0;
 	const double rangeStop = 1;
 	const unsigned long iterations = 5;
-	const double cutoff = 0.01;
+	const double cutoff = 0.99;
 
 	a1 = libUncertainDoubleUniformDist(rangeStart, rangeStop);
 	printf("Create a uniform distribution a1 between [%lf, %lf] (constant)\n", rangeStart, rangeStop);
