@@ -53,11 +53,6 @@ main(int argc, char *  argv[])
 		printf("result's 2nd mode = %lf\n", result2ndMode);
 		printf("tail (>%+lf) probability for result = %lf\n", +cutoff, resultTailProbabilityPositive);
 		printf("tail (<%+lf) probability for result = %lf\n", -cutoff, resultTailProbabilityNegative);
-
-		/*if (result < cutoff){*/
-		/*  printf("result below cutoff %.3lf\n", cutoff);*/
-		/*}*/
-
 	}
 
 	return 0;
