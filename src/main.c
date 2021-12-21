@@ -4,6 +4,26 @@
 int
 main(int argc, char *  argv[])
 {
+	/*
+	 * Example for testing on signaloid.io
+	 *
+	 * Create a distribution a1 and subtract from it parameter-equal but changing
+	 * distributions a2
+	 *
+	 * If a1, a2 were non-uncertainty-aware fixed-value scalars, the result would
+	 * be identically 0. If a1, a2 were e.g. sensor readings that are expected to
+	 * fall very close to each other, a real program might check for them to be
+	 * equal (given some $cutoff for comparing floating point values), and change
+	 * its control flow path based on the outcome. Given enough time and uncertainty,
+	 * the noise in a1 and a2 will add together to reach over some $cutoff.
+	 *
+	 * To find the likelihood for this occuring, we can check for the result of
+	 * abs(a1 - a2) > cutoff, which is a simple measure for when an unlikely-but-
+	 * possible result would occur and require special handling (e.g. re-checking)
+	 * when working with noisy data but without the use of uncertainty/distribution-
+	 * aware arithmetic.
+	 *
+	 */
 	double a1, a2;
 	const double rangeStart = 0;
 	const double rangeStop = 1;
