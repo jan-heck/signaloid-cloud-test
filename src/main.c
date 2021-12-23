@@ -27,7 +27,7 @@ main(int argc, char *  argv[])
 	double a1, a2;
 	const double rangeStart = 0;
 	const double rangeStop = 1;
-	const unsigned long iterations = 5;
+	const unsigned long iterations = 10;
 	const double cutoff = 0.9;
 
 	a1 = libUncertainDoubleUniformDist(rangeStart, rangeStop);
